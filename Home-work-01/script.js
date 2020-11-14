@@ -1,4 +1,7 @@
-let prise_Bread = 15.678, prise_fish = 123.965, prise_water = 90.2345, sum;
+const prise_Bread = 15.678; 
+const prise_fish = 123.965; 
+const prise_water = 90.2345;
+let sum;
 
 //Зробив відразу шаблонні рядки щоб не копіювати одне й те ж;
 
