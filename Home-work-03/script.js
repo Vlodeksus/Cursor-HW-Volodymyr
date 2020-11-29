@@ -60,8 +60,8 @@ return Math.floor(randomDigit)
 document.writeln (`<h3>Випадкове число від значення 1 до значення 2 становить - ${getRandomNumber(3, 9)}</h3><br>`);
 
 // //Зарплата-податок
-function zarplataBezPodatku (zarplata) {
-bezPodatku = zarplata - (zarplata * (19.5/100));
-return bezPodatku.toFixed(2);
+function salaryWithoutTax (salary) {
+    withoutTax = salary - (salary * (19.5/100));
+return withoutTax.toFixed(2);
 } 
-document.writeln (`<h3>Зарплата без податку (-19,5%) становить - ${zarplataBezPodatku(987.99)}</h3>`)
+document.writeln (`<h3>Зарплата без податку (-19,5%) становить - ${salaryWithoutTax(987.99)}</h3>`)
