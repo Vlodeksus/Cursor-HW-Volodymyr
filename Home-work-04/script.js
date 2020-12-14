@@ -2,6 +2,28 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
+// function pairsOfStudents(students) {
+//     let pairs = [];
+//     let girls = [];
+//     for (let i = 0; i < students.length; i++) {
+//         let nameOfStudent = students[i];
+//         if (nameOfStudent[nameOfStudent.length - 1] !== ‘а’) {
+//             pairs.push([nameOfStudent]);
+//         } else {
+//             girls.push(nameOfStudent);
+//         }
+//     }
+//     for (let i = 0; i < pairs.length; i++) {
+//         if (i < girls.length) {
+//             pairs[i].push(girls[i]);
+//         }
+//     }
+//     const results = pairs.reduce((result, pair) => {
+//         return result + pair.join(” - “) + “;”;
+//     }, “”);
+//     return results.split(“;”);
+// }
+// console.log(`<h3>Розділення студентів на пари - ${pairsOfStudents(students).join(“; “)}</h3><br>`)
 //Пари студентів
 function pairsOfStudents(students) {
 
@@ -24,7 +46,7 @@ function pairsOfStudents(students) {
     return pairs;
 }
 
-document.writeln(`<h3>Розділення студентів на пари:  ${pairsOfStudents(students)}</h3><br>`)
+document.writeln(`<h3>Розділення студентів на пари:  ${pairsOfStudents(students).join('; ')}</h3><br>`)
 
 //Теми пар студентів
 function themeOfPairStudents(pairsOfStudents, themes) {
@@ -37,7 +59,7 @@ function themeOfPairStudents(pairsOfStudents, themes) {
     }
     return themesOfStudent;
 }
-document.writeln(`<h3>Теми пар студентів: ${themeOfPairStudents(pairsOfStudents(students), themes)}</h3><br>`);
+document.writeln(`<h3>Теми пар студентів: <br> ${themeOfPairStudents(pairsOfStudents(students), themes)}</h3><br>`);
 //!!!Комент для себе - довго мучився бо при виклику ф-ї pairOfStudents не вказав аргумент (students) 
 
 // Оцінки студентів:
@@ -50,7 +72,7 @@ function marksOfStudents(students, marks) {
     }
     return studentsMark;
 }
-document.writeln(`<h3>Оцінки студентів:'<br>' ${marksOfStudents(students, marks)}</h3><br>`)
+document.writeln(`<h3>Оцінки студентів: <br> ${marksOfStudents(students, marks)}</h3><br>`)
 
 //Оцінки за теми пар студентів
 
